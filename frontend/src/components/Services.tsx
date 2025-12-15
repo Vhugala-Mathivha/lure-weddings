@@ -24,9 +24,9 @@ export const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
       description:
         "Expert guidance on etiquette, timelines, and logistics from our AI concierge.",
       image:
-        "plan.jpg",
+        "/plan.jpg",
       iconImage:
-        "icon.png",
+        "/icon.png",
       iconAlt: "Planning icon",
     },
     {
@@ -37,9 +37,9 @@ export const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
       description:
         "Generate bespoke visual inspiration for your decor, attire, and venue. Scroll down on the home page to start.",
       image:
-        "6726043c22bf3ac45684472580ef5427.jpg",
+        "/6726043c22bf3ac45684472580ef5427.jpg",
       iconImage:
-        "icon.png",
+        "/icon.png",
       iconAlt: "Vision board icon",
     },
     {
@@ -49,9 +49,9 @@ export const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
       description:
         "Craft articulate, heartfelt vows that capture your unique love story.",
       image:
-        "vow.jpg",
+        "/vow.jpg",
       iconImage:
-        "icon.png",
+        "/icon.png",
       iconAlt: "Writing icon",
     },
   ];
