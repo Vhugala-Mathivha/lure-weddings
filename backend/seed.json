@@ -1,0 +1,95 @@
+[
+  {
+    "model": "core.service",
+    "pk": 1,
+    "fields": {
+      "title": "General Wedding Planning",
+      "description": "Expert guidance on etiquette, timelines, and logistics from our AI concierge.",
+      "image_url": "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=80",
+      "icon": "chat-bubble",
+      "slug": "planning"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 2,
+    "fields": {
+      "title": "Aesthetic Vision Board",
+      "description": "Generate bespoke visual inspiration for your decor, attire, and venue.",
+      "image_url": "https://images.unsplash.com/photo-1520854221050-0f4caff449fb?auto=format&fit=crop&w=800&q=80",
+      "icon": "image",
+      "slug": "vision-board"
+    }
+  },
+  {
+    "model": "core.service",
+    "pk": 3,
+    "fields": {
+      "title": "Vow Atelier",
+      "description": "Craft articulate, heartfelt vows that capture your unique love story.",
+      "image_url": "https://images.unsplash.com/photo-1469371670807-013ccf25f16c?auto=format&fit=crop&w=800&q=80",
+      "icon": "quill",
+      "slug": "vows"
+    }
+  },
+  {
+    "model": "core.galleryimage",
+    "pk": 1,
+    "fields": {
+      "title": "Elegant table setting with greenery",
+      "alt": "Elegant table setting with greenery",
+      "image_url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+      "category": "details"
+    }
+  },
+  {
+    "model": "core.galleryimage",
+    "pk": 2,
+    "fields": {
+      "title": "Bridal bouquet details",
+      "alt": "Bridal bouquet details",
+      "image_url": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80",
+      "category": "florals"
+    }
+  },
+  {
+    "model": "core.galleryimage",
+    "pk": 3,
+    "fields": {
+      "title": "Couple at sunset",
+      "alt": "Couple at sunset",
+      "image_url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+      "category": "couple"
+    }
+  },
+  {
+    "model": "core.galleryimage",
+    "pk": 4,
+    "fields": {
+      "title": "Rings and florals",
+      "alt": "Wedding rings on florals",
+      "image_url": "https://images.unsplash.com/photo-1472480980350-9c7b54b4f208?auto=format&fit=crop&w=900&q=80",
+      "category": "details"
+    }
+  },
+  {
+    "model": "core.galleryimage",
+    "pk": 5,
+    "fields": {
+      "title": "Outdoor ceremony arch",
+      "alt": "Outdoor ceremony arch with florals",
+      "image_url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80",
+      "category": "ceremony"
+    }
+  },
+  {
+    "model": "core.galleryimage",
+    "pk": 6,
+    "fields": {
+      "title": "Reception tablescape",
+      "alt": "Reception tablescape with candles",
+      "image_url": "https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?auto=format&fit=crop&w=900&q=80",
+      "category": "reception"
+    }
+  }
+]
