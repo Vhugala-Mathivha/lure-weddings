@@ -1,19 +1,24 @@
-const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8000";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || ""; // e.g., "https://your-backend.vercel.app"
 
-export async function fetchJSON<T>(path: string, options?: RequestInit): Promise<T> {
+async function postJSON<T>(path: string, body: any): Promise<T> {
   const res = await fetch(`${API_BASE}${path}`, {
+    method: "POST",
     headers: { "Content-Type": "application/json" },
-    ...options,
+    body: JSON.stringify(body),
   });
-  if (!res.ok) throw new Error(`Request failed: ${res.status}`);
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(text || `Request failed with ${res.status}`);
+  }
   return res.json() as Promise<T>;
 }
 
+export type VowsResponse = { result_text: string };
+export type InspirationResponse = { image_url: string; description: string };
+
 export const Api = {
-  getServices: () => fetchJSON("/api/services/"),
-  getGallery: () => fetchJSON("/api/gallery/"),
-  postInspiration: (prompt: string) =>
-    fetchJSON("/api/inspiration/", { method: "POST", body: JSON.stringify({ prompt }) }),
   postVows: (prompt: string) =>
-    fetchJSON("/api/vows/", { method: "POST", body: JSON.stringify({ prompt }) }),
+    postJSON<VowsResponse>("/api/vows", { prompt }),
+  postInspiration: (prompt: string) =>
+    postJSON<InspirationResponse>("/api/inspiration", { prompt }),
 };

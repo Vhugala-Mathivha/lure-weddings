@@ -22,6 +22,8 @@ export function Inspiration() {
 
   return (
     <section id="inspiration" className="bg-white py-20">
+      {/* Backward-compatible anchor for older links */}
+      <div id="vision-section" className="sr-only" aria-hidden="true" />
       <div className="lux-container text-center">
         <h3 className="text-4xl serif mb-3">Visual Inspiration</h3>
         <p className="text-[rgba(31,26,23,0.7)] mb-10">
@@ -48,11 +50,7 @@ export function Inspiration() {
 
         {result && (
           <div className="mt-12 flex flex-col items-center gap-4">
-            <img
-              src={result.image_url}
-              alt={result.description}
-              className="w-full max-w-3xl rounded-lg shadow-soft object-cover"
-            />
+            <img src={result.image_url} alt={result.description} className="w-full max-w-3xl rounded-lg shadow-soft object-cover" />
             <p className="text-[rgba(31,26,23,0.75)]">{result.description}</p>
           </div>
         )}

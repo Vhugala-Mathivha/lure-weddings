@@ -6,9 +6,9 @@ export function Footer() {
       <div className="lux-container flex flex-col md:flex-row items-center justify-between gap-1 text-[11px] text-[rgba(31,26,23,0.65)]">
         <span>© 2025 LURE Weddings. All rights reserved.</span>
         <div className="flex gap-2">
-          <a href="#" className="hover:text-charcoal">Contact</a>
-          <a href="#" className="hover:text-charcoal">Instagram</a>
-          <a href="#" className="hover:text-charcoal">Pinterest</a>
+          <a href="#contact" className="hover:text-charcoal">Contact</a>
+          <a href="https://www.instagram.com" target="_blank" rel="noreferrer" className="hover:text-charcoal">Instagram</a>
+          <a href="https://www.pinterest.com" target="_blank" rel="noreferrer" className="hover:text-charcoal">Pinterest</a>
         </div>
       </div>
     </footer>
