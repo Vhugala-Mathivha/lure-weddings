@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_BASE_URL || ""; // e.g., "https://your-backend.vercel.app"
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "https://lure-weddings-w8jl.vercel.app"; // e.g., "https://your-backend.vercel.app"
 
 async function postJSON<T>(path: string, body: any): Promise<T> {
   const res = await fetch(`${API_BASE}${path}`, {

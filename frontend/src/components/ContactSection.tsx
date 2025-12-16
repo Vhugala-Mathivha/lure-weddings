@@ -14,7 +14,7 @@ export const ContactSection: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-white border border-[#ede7e0] shadow-[0_10px_18px_rgba(0,0,0,0.05)] rounded-[6px] p-8 flex flex-col items-center text-[#2d241d]">
             <div className="w-10 h-10 rounded-full bg-[#f3eee8] flex items-center justify-center mb-5 overflow-hidden">
-              <img src={emailIcon} alt="Email icon" className="w-14 h-14 object-contain" loading="lazy" />
+              <img src="/email.png" alt="Email icon" className="w-14 h-14 object-contain" loading="lazy" />
             </div>
             <p className="text-[11px] tracking-[0.18em] uppercase text-[#9c8b7f] mb-2">Email</p>
             <a href="mailto:vhugalamathivha@gmail.com" className="text-[15px] text-[#2d241d] hover:text-[#7a5f4d] transition">
@@ -24,7 +24,7 @@ export const ContactSection: React.FC = () => {
 
           <div className="bg-white border border-[#ede7e0] shadow-[0_10px_18px_rgba(0,0,0,0.05)] rounded-[6px] p-8 flex flex-col items-center text-[#2d241d]">
             <div className="w-10 h-10 rounded-full bg-[#f3eee8] flex items-center justify-center mb-5 overflow-hidden">
-              <img src={phoneIcon} alt="Phone icon" className="w-14 h-14 object-contain" loading="lazy" />
+              <img src="/phone.png" alt="Phone icon" className="w-14 h-14 object-contain" loading="lazy" />
             </div>
             <p className="text-[11px] tracking-[0.18em] uppercase text-[#9c8b7f] mb-2">Phone</p>
             <a href="tel:+27790457095" className="text-[15px] text-[#2d241d] hover:text-[#7a5f4d] transition">
