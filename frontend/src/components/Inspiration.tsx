@@ -7,14 +7,22 @@ export function Inspiration() {
   const [prompt, setPrompt] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<InspirationResult | null>(null);
+  const [error, setError] = useState<string>("");
 
   const onGenerate = async () => {
+    if (!prompt.trim()) {
+      setError("Please describe your aesthetic first.");
+      return;
+    }
+    setError("");
+    setResult(null);
     try {
       setLoading(true);
-      const data = (await Api.postInspiration(prompt)) as InspirationResult;
+      const data = (await Api.postInspiration(prompt.trim())) as InspirationResult;
       setResult(data);
-    } catch (e) {
+    } catch (e: any) {
       console.error(e);
+      setError(e?.message || "Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -48,9 +56,17 @@ export function Inspiration() {
           </div>
         </div>
 
+        <div className="min-h-[28px] mt-2 text-sm text-red-500">
+          {error && <span>{error}</span>}
+        </div>
+
         {result && (
           <div className="mt-12 flex flex-col items-center gap-4">
-            <img src={result.image_url} alt={result.description} className="w-full max-w-3xl rounded-lg shadow-soft object-cover" />
+            <img
+              src={result.image_url}
+              alt={result.description}
+              className="w-full max-w-3xl rounded-lg shadow-soft object-cover"
+            />
             <p className="text-[rgba(31,26,23,0.75)]">{result.description}</p>
           </div>
         )}

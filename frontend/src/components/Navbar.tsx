@@ -13,7 +13,12 @@ const navItems = [
 
 const scrollToHash = (hash: string) => {
   const el = document.querySelector(hash);
-  if (el) el.scrollIntoView({ behavior: "smooth" });
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  } else {
+    // Fallback: set the hash to let the browser jump
+    window.location.hash = hash;
+  }
 };
 
 export const Navbar: React.FC = () => {
@@ -35,7 +40,12 @@ export const Navbar: React.FC = () => {
           className="h-full flex items-center"
           aria-label="Go to home"
         >
-          <img src={logoSrc} className="h-12 w-auto object-contain" loading="lazy" alt="LURE Weddings logo" />
+          <img
+            src={logoSrc}
+            className="h-12 w-auto object-contain"
+            loading="lazy"
+            alt="LURE Weddings logo"
+          />
         </button>
 
         <nav className="hidden md:flex h-full items-center gap-8 text-sm uppercase tracking-[0.18em] text-[rgba(31,26,23,0.72)]">

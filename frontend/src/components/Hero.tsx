@@ -7,7 +7,11 @@ interface HeroProps {
 
 const scrollToId = (id: string) => {
   const el = document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior: "smooth" });
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  } else {
+    window.location.hash = `#${id}`;
+  }
 };
 
 export const Hero: React.FC<HeroProps> = ({ onStartPlanning }) => {
