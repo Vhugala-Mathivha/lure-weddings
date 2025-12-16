@@ -5,10 +5,10 @@ const logoSrc = "/logo.png"; // ensure logo.png is in frontend/public
 const navItems = [
   { href: "#home", label: "Home" },
   { href: "#services", label: "Services" },
-  { href: "#about", label: "About Us" },
   { href: "#inspiration", label: "Inspiration" },
   { href: "#vows", label: "Vow Writer" },
   { href: "#contact", label: "Contact" },
+  { href: "#about", label: "About Us" } // moved to the end
 ];
 
 const scrollToHash = (hash: string) => {
@@ -16,7 +16,6 @@ const scrollToHash = (hash: string) => {
   if (el) {
     el.scrollIntoView({ behavior: "smooth" });
   } else {
-    // Fallback: set the hash to let the browser jump
     window.location.hash = hash;
   }
 };
